@@ -1,6 +1,7 @@
 # Howler-monkey-Ateles-VC
 Mapping and variant calling of howler monkey WGS to Ateles geoffroyi reference genome
 
+## Mapping
 ### Step 1: UBAM
 Create unaligned bam from forward and reverse reads for each lane per individual
 Function: gatk FastqToSam
@@ -25,9 +26,10 @@ Functions: gatk SortSam, gatk MarkDuplicates
 Rename read groups to show single individual label - required for HaplotypeCaller
 Function: gatk AddOrReplaceReadGroups
 
-## End of Mapping - save/archive bams and index files at this stage, run additional statistics (average depth, percent mapping, file validation)
+### End of Mapping - save/archive bams and index files at this stage, run additional statistics (average depth, percent mapping, file validation)
 Scripts: samtools_mapstats.sh (samtools flagstat and depth), samtools_collectstats.sh, validatesam.sh (gatk ValidateSamFile)
 
+## Variant Calling
 ### Step 7: Single individual per contig VC
 Call SNPs and indels per individual per contig set
 Function: gatk HaplotypeCaller
