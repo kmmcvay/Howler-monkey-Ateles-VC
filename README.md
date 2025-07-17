@@ -52,7 +52,7 @@ Run joint genotyping from database per contig set
 Function: gatk GenotypeGVCFs
 
 ### Step 10: Hard filtering
-Apply hard filtering thresholds to each contig VCF (SNPs only, QD < 2.0 || FS > 60.0 || SOR > 3.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0)
+Apply hard filtering thresholds to each contig set VCF (SNPs only, QD < 2.0 || FS > 60.0 || SOR > 3.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0)
 
 Functions: gatk SelectVariants, gatk VariantFiltration
 
